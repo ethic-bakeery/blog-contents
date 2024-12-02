@@ -1,0 +1,97 @@
+---
+title: Junior Security Analyst Intro
+description: Play through a day in the life of a Junior Security Analyst, their responsibilities and qualifications needed to land a role as an analyst.
+pubDate: 12 01 2024
+image: /tryhackme/SOC1/Section1/index.png
+categories:
+  - SOC level 1
+tags:
+  - Defense Frameworks
+---
+import Info from "../../components/blog/info.astro";
+
+## Junior Security Analyst Role: Triage Specialist
+
+As a **Junior Security Analyst** or **Tier 1 SOC Analyst**, your primary role will be as a Triage Specialist. You will spend a significant amount of time triaging or monitoring event logs and alerts.
+
+### Responsibilities
+- **Monitor Alerts**: Investigate and analyze security alerts continuously.
+- **Manage Security Tools**: Configure and maintain essential security tools.
+- **Develop IDS Signatures**: Create basic **Intrusion Detection System (IDS)** signatures. Learn more [here](https://www.barracuda.com/glossary/intrusion-detection-system).
+- **Collaborate in SOC**: Participate in team meetings and working groups.
+- **Ticketing & Escalation**: Create incident tickets and escalate as needed to Tier 2 or team leads.
+
+### Required Qualifications
+
+- **0-2 years of experience** in Security Operations.
+- Basic understanding of:
+  - **Networking** (OSI model or TCP/IP model)
+  - **Operating Systems** (Windows, Linux)
+  - **Web Applications**
+  - To learn more about networking models, check the Introductory Networking Room.
+- **Scripting/Programming skills** are a plus.
+
+#### Desired Certification
+
+- **CompTIA Security+**
+
+#### Career Progression
+
+As you develop your skills, you’ll advance to **Tier 2** and eventually **Tier 3** roles.
+An overview of the Security Operations Center (SOC) Three-Tier Model
+<img src="/tryhackme/SOC1/Section1/3-tier-model.png" alt="SOC Responsibility" height="450" width="600" style="display: block; margin-left: auto; margin-right: auto;" />
+
+## Security Operations Center (SOC)
+
+A **Security Operations Center (SOC)** monitors, investigates, prevents, and responds to cyber threats 24/7, protecting assets like intellectual property, personnel data, and business systems. The size of a SOC team depends on the organization's needs.
+<img src="/tryhackme/SOC1/Section1/soc.png" alt="SOC Responsibility" height="450" width="600" style="display: block; margin-left: auto; margin-right: auto;" />
+
+### SOC Responsibilities
+<img src="/tryhackme/SOC1/Section1/soc-repo.png" alt="SOC Responsibility" height="450" width="600" style="display: block; margin-left: auto; margin-right: auto;" />
+
+### 1. **Preparation and Prevention**
+- Stay informed on cybersecurity threats via resources like [Twitter](https://feedly.com/i/welcome) and [Feedly](https://feedly.com/i/welcome).
+- Gather intelligence on threats and threat actors (TTPs - Tactics, Techniques, and Procedures). To understand TTPs better, refer to this [Optiv blog](https://www.optiv.com/explore-optiv-insights/blog/tactics-techniques-and-procedures-ttps-within-cyber-threat-intelligence).
+- Prevent threats by updating firewall signatures, patching vulnerabilities, and managing applications and IPs.
+- Check [McAfee's guide on creating a cybersecurity strategy](https://www.mcafee.com/enterprise/en-us/security-awareness/cybersecurity/creating-cybersecurity-strategy.html) for more insights.
+
+### 2. **Monitoring and Investigation**
+- Use tools like **SIEM** (Security Information and Event Management) and **EDR** (Endpoint Detection and Response) to monitor suspicious activities. Learn more about SIEM [here](https://www.fireeye.com/products/helix/what-is-siem-and-how-does-it-work.html) and about EDR [here](https://www.mcafee.com/enterprise/en-us/security-awareness/endpoint/what-is-endpoint-detection-and-response.html).
+- Prioritize alerts (Low, Medium, High, Critical), starting with the highest level.
+- Junior Security Analysts are key in triaging alerts, investigating attacks, and preventing further damage.
+
+### 3. **Response**
+- After investigation, take action to isolate compromised hosts, terminate malicious processes, and remove harmful files.
+- To stay updated on threat alerts, refer to this [CISA alert on APT40](https://us-cert.cisa.gov/ncas/alerts/aa21-200a).
+
+## A Day in the Life of a Junior Security Analyst
+
+A **Junior (Associate) Security Analyst** works on the frontline of cybersecurity, handling security tickets and various log sources from multiple tools. Their day involves tasks like monitoring network traffic, analyzing IPS and IDS alerts, investigating suspicious emails, and using open-source intelligence to make informed decisions on alerts.
+
+Incident response is a key responsibility, and while it can take hours or even weeks, the reward comes when a threat is successfully remediated. Analysts work through critical questions about data exfiltration, potential pivots by attackers, and extensive detection, containment, and remediation tasks.
+
+A Junior Security Analyst's day usually begins by checking for new alerts and security tickets to address. It’s an exciting and challenging role that requires a solid understanding of security principles to be successful.
+
+
+<Info>Make sure you read all the prompts in the practical section, click on the View site to start the practice</Info>
+
+<img src="/tryhackme/SOC1/Section1/instructions.png" alt="SOC Responsibility" height="450" width="600" style="display: block; margin-left: auto; margin-right: auto;" />
+Reda the above instructions
+<img src="/tryhackme/SOC1/Section1/malicious-ip.png" alt="SOC Responsibility" height="450" width="600" style="display: block; margin-left: auto; margin-right: auto;" />
+From the picture above, we can see that an unauthorized connection attempt was made from the IP address 221.181.185.159 on port 22, which is indeed look malicious. Click on it
+<img src="/tryhackme/SOC1/Section1/scan.png" alt="scan ip" height="450" width="600" style="display: block; margin-left: auto; margin-right: auto;" />
+Now from the above image scan the IP to determine whether its indeed malicious or not,Read the instructions andd move ahaead
+<img src="/tryhackme/SOC1/Section1/ip-info.png" alt="malicioud ip" height="450" width="600" style="display: block; margin-left: auto; margin-right: auto;" />
+The above image shows that the IP is malicious and its found in the Database of Mailious IP, now what we will escalate it to the Team Lead to get the IP blocked
+<img src="/tryhackme/SOC1/Section1/escalate-evnt.png" alt="block malicioud ip" height="450" width="600" style="display: block; margin-left: auto; margin-right: auto;" />
+As a Junior your task is to esclate the findings, among the followings who should we escalate it to? of course `Will Griffin`
+<img src="/tryhackme/SOC1/Section1/block.png" alt="block malicioud ip" height="450" width="600" style="display: block; margin-left: auto; margin-right: auto;" />
+Having identified the malicious IP(221.181.185.159), it is crucial to take immediate action to prevent any future threats. The appropriate measure is to block the malicious IP address to ensure it cannot compromise our systems again. finally obtained your FLAG
+
+### My Thoughts on the "Junior Security Analyst" Room
+
+After completing the "Junior Security Analyst" room, I gained a deeper understanding of the critical role that a Tier 1 SOC Analyst plays in maintaining security. The tasks were both challenging and rewarding, particularly when dealing with real-world scenarios like identifying malicious IP addresses and escalating incidents. I appreciated how the room walked me through the entire process—from triaging alerts to taking action on potential threats.
+
+One key takeaway for me was the importance of collaboration in a SOC. As a Junior Analyst, it’s essential to effectively escalate issues to higher-tier analysts and work together to mitigate risks. I also realized how much attention to detail and thorough investigation is required to ensure a swift response to security incidents.
+
+Overall, this room provided valuable hands-on experience and has given me a greater appreciation for the responsibilities and challenges faced by security analysts in the field. It has also further motivated me to pursue this career path and continue building my skills in cybersecurity.
